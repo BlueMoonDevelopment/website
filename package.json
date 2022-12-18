@@ -1,6 +1,6 @@
 {
     "name": "bluemoondev-website",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "The website for BlueMoonDev",
     "scripts": {
         "start": "node server.js",
