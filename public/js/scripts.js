@@ -18,16 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.cookieconsent.initialise({
     "palette": {
-        "popup": {"background": "#3c404d", "text": "#d6d6d6"},
-        "button": {"background": "#25A349"}},
-    "theme": "edgeless",
+        "popup": {
+            "background": "#252e39"
+        },
+        "button": {
+            "background": "#14a7d0"
+        }
+    },
     "position": "top",
-    "content": {
-        "message": "Diese Webseite verwendet Cookies, um Ihnen ein angenehmeres Surfen zu ermöglichen.",
-        "dismiss": "Akzeptieren",
-        "link": "Mehr erfahren",
-        "href": "/datenschutz"
-    }
+    "static": true
 });
 
 
