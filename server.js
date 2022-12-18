@@ -4,12 +4,12 @@ const path = require('path');
 
 const app = express();
 app.use(express.json());
-app.use(express.static("express"))
 
-//default url for website
-app.use('/', function (req, res) {
-    res.sendFile(path.join(__dirname+'/express/index.html'));
-    //__dirname resolves to project folder
+app.set('views', './views');
+app.set('view engine', 'pug');
+
+app.get('/', (req, res) => {
+    res.render('index', {title: 'Hey', message: 'Hello there!'})
 });
 
 const server = http.createServer(app);
