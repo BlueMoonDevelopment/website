@@ -1,0 +1,11 @@
+{
+    "name": "bluemoondev-website",
+    "version": "0.0.1",
+    "description": "The website for BlueMoonDev",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
