@@ -27,6 +27,11 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Home'})
 });
 
+app.get('/imprint', (req, res) => {
+    res.render('imprint', {title: 'Imprint'})
+});
+
+
 
 /**
  * Server Activation
