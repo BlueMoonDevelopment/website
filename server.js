@@ -33,6 +33,10 @@ app.get('/imprint', (req, res) => {
 
 
 
+//404 Error, has to be called last (after all other pages)
+app.use(function(req,res){
+    res.status(404).render('404', {title: '404'});
+});
 /**
  * Server Activation
  */

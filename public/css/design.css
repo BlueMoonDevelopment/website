@@ -23,13 +23,6 @@
     color: white !important;
 }
 
-/* Generelles Design */
-a {
-    color: #4361ee !important;
-    text-decoration: none;
-    background-color: transparent;
-}
-
 /* Funktionsklassen */
 .is-centered {
     text-align: center !important;
@@ -37,10 +30,4 @@ a {
 
 .not-center {
     text-align: initial !important;
-}
-
-/* Schriftarten */
-@font-face {
-    font-family: "Sans Forgetica";
-    src: url(/css/SansForgetica-Regular.otf);
 }
