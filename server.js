@@ -33,6 +33,10 @@ app.get('/imprint', (req, res) => {
 
 
 
+//404 Error
+app.use(function(req,res){
+    res.status(404).render('404', {title: '404'});
+});
 /**
  * Server Activation
  */
