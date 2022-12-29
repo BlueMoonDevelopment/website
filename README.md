@@ -2,7 +2,10 @@
 
 
 NPM, NodeJS and PM2 need to be installed.
-On First startup, run "setup-first.sh" to install all the neccessary dependencies.
+On First startup, run 
+npm install
+npm run css-build
+to install all the neccessary dependencies.
 
 # Development
 

@@ -1,5 +1,3 @@
-//server.js
-
 /**
  * Required external modules
  */
@@ -7,39 +5,39 @@ const express = require('express');
 const path = require('path');
 
 /**
+ * Required internal modules
+ */
+const routemanager = require('./routemanager.js');
+const dbmanager = require('./dbmanager.js');
+const logmanager = require('./logmanager.js');
+const { website_port } = require('./config.json');
+
+/**
  * App Variables
  */
 const app = express();
-const port = 8080;
+
+/**
+ * SQL Connection.
+ */
+const conn = dbmanager.connectToDatabase();
 
 /**
  * App Configuration
  */
 app.use(express.json());
-app.set('views', path.join(__dirname, "views"));
+app.set('views', path.join(path.join(__dirname, 'views'), 'frontend'));
 app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 /**
  * Routes Definitions
  */
-app.get('/', (req, res) => {
-    res.render('index', {title: 'Home'})
-});
+routemanager.loadRoutes(app);
 
-app.get('/imprint', (req, res) => {
-    res.render('imprint', {title: 'Imprint'})
-});
-
-
-
-//404 Error, has to be called last (after all other pages)
-app.use(function(req,res){
-    res.status(404).render('404', {title: '404'});
-});
 /**
  * Server Activation
  */
-app.listen(port, () => {
-    console.log(`Listening to requests at 127.0.0.1:${port}`);
+app.listen(website_port, () => {
+    logmanager.info(`Listening to requests at 127.0.0.1:${website_port}`);
 });
