@@ -1,6 +1,7 @@
 {
     "parser": "@typescript-eslint/parser",
     "plugins": ["@typescript-eslint"],
+	"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
     "rules": {
         "arrow-spacing": ["warn", { "before": true, "after": true }],
 		"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
