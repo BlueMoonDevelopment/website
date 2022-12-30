@@ -1,4 +1,4 @@
-# NodeJS-Website
+# NodeJS-Website [![Node.js CI](https://github.com/BlueMoonDevelopment/NodeJS-Website/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/BlueMoonDevelopment/NodeJS-Website/actions/workflows/node.js.yml)
 
 
 NPM, NodeJS and PM2 need to be installed.
